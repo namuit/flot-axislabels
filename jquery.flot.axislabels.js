@@ -96,9 +96,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     CanvasAxisLabel.prototype.draw = function(box) {
         if (!this.opts.axisLabelColour)
             this.opts.axisLabelColour = 'black';
+        if (!this.opts.axisLabelWeight)
+            this.opts.axisLabelWeight = 'normal';
         var ctx = this.plot.getCanvas().getContext('2d');
         ctx.save();
-        ctx.font = this.opts.axisLabelFontSizePixels + 'px ' +
+        ctx.font = this.opts.axisLabelWeight + ' ' + this.opts.axisLabelFontSizePixels + 'px ' +
             this.opts.axisLabelFontFamily;
         ctx.fillStyle = this.opts.axisLabelColour;
         var width = ctx.measureText(this.opts.axisLabel).width;
