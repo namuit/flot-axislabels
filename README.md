@@ -85,6 +85,7 @@ Canvas mode supports several other options:
 * axisLabelFontFamily (string): the font family of the font (default:
   sans-serif)
 * axisLabelColour (string): the font colour (default: black)
+* axisLabelWeight (string): the font weight (default: normal)
 
 
 Compatibility
